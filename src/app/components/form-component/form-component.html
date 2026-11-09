@@ -1,0 +1,41 @@
+<div class="container my-4">
+  <h2 class="mb-4">Reactive Form</h2>
+
+  <div class="mb-3">
+    <label for="titulo" class="form-control">Título</label>
+    <input type="text" class="form-control" id="titulo" placeholder="Ej: Novedades en Angular" [formControl]="titulo">
+  </div>
+
+  <div class="mb-3"> 
+    <label for="descripcion" class="form-control">Descripción</label>
+    <textarea id="descripcion" class="form-control" rows="3" placeholder="Escribe el contenido..." [formControl]="descripcion"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="categoria" class="form-control">Categoría</label>
+    <select id="categoria" class="form-control" [formControl]="categoria">
+      <option value="" disabled selected>Selecciona una categoría</option>
+      <option value="Tecnologia">Tecnología</option>
+      <option value="Diseño">Diseño</option>
+      <option value="Programacion">Programación</option>
+      <option value="Novedades">Novedades</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="fieldEtiquetas" class="form-control">Etiquetas</label>
+    <input type="text" class="form-control" id="etiquetas" placeholder="angular, bootstrap, frontend" [formControl]="etiquetas">
+  </div>
+
+  <div class="mb-3">
+    <label for="fieldEmail" class="form-control">Email del autor</label>
+    <input type="email" class="form-control" id="email" placeholder="autor@ejemplo.com" [formControl]="email">
+  </div>
+
+  <div class="mb-3">
+    <label for="publicacion" class="form-control">Fecha de Publicación</label>
+    <input type="date" class="form-control" id="publicacion" [formControl]="publicacion">
+  </div>
+  
+  <button type="button" class="btn btn-primary">Guardar Publicación</button>
+</div>
